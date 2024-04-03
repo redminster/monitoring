@@ -121,5 +121,5 @@ prometheus:
       existingClaim: "prometheus-pvc"
       volumeName: "prometheus-pv"
   service:
-    Type: loadBalancer
+    Type: LoadBalancer
     port: 80
