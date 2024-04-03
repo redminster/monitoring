@@ -1,14 +1,13 @@
 # Default values for grafana.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-grafana:
-  service:
-    enabled: true
-    type: loadBalancer
-    port: 80
-  persistence:
-    enabled: true
-    size: 10Gi
-    storageClassName: grafana-pvc
-    type: NodePort
-    nodePort: 30180
+service:
+  enabled: true
+  type: loadBalancer
+  port: 80
+persistence:
+  enabled: true
+  size: 10Gi
+  storageClassName: grafana-pvc
+  type: NodePort
+  nodePort: 30180
