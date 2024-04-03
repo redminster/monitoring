@@ -40,7 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: loadBalancer
   port: 80
 
 ingress:
@@ -83,7 +83,7 @@ readinessProbe:
 autoscaling:
   enabled: false
   minReplicas: 1
-  maxReplicas: 100
+  maxReplicas: 1
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
@@ -109,6 +109,7 @@ grafana:
   service:
     enabled: true
     type: loadBalancer
+    port: 80
   persistence:
     enabled: true
     size: 10Gi

@@ -40,7 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIp
   port: 80
 
 ingress:
@@ -122,3 +122,4 @@ prometheus:
       volumeName: "prometheus-pv"
   service:
     Type: loadBalancer
+    port: 80
